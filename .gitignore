@@ -14,6 +14,7 @@ reports/
 .vscode/
 
 # Sopify runtime state
+.sopify-skills
 .sopify-skills/state/
 .sopify-skills/replay/
 .sopify-skills/plan/_registry.yaml
@@ -21,3 +22,4 @@ reports/
 # Temporary files
 tmp/
 .tmp/
+.sopify-skills/
