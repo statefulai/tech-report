@@ -13,6 +13,14 @@ Precise, readable Chinese technical reports for engineers. Not blog posts, acade
 - `writing-dna.md` applies to every report from the first sentence to the final footer.
 - Plugin capability is additive only: missing capability means omit the slot, not change the spine.
 
+## Fact Discipline
+
+- Separate observed facts from inference.
+- Observed facts should be grounded in a file path, symbol name, code excerpt, or source link when available.
+- Inferred statements must be labeled `推断` or `可能`; do not present them as verified implementation details.
+- Do not confuse command targets, aliases, exported symbols, and registered components.
+- Quantitative claims need a source or counting method; otherwise use approximate wording or omit the metric.
+
 ## Typography Rules
 
 - Put one space between Chinese and half-width tokens: ✅ `使用 API 获取 3 个 token` ❌ `使用API获取3个token`

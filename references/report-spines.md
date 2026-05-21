@@ -11,6 +11,7 @@ The report engine resolves capabilities, not hard-coded skill names.
 - `data_source` and `browser` are input-acquisition capabilities and do not change the spine.
 - When multiple registered plugins expose the same capability, prefer the first available plugin in `plugins.yaml` order.
 - If a capability is missing, omit the slot and continue.
+- If a diagram plugin cannot generate from a structured description, degrade the slot to Mermaid or a text diagram instead of hand-authoring SVG coordinates.
 - Never require a specific skill name such as `fireworks-tech-graph` or `doc-to-sketch`.
 - Every spine may use `hero-illustration` as an optional opener when illustration capability is available.
 

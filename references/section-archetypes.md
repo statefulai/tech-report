@@ -31,12 +31,12 @@ Opening section that positions the subject and highlights key facts.
 | 维度 | 值 |
 |------|-----|
 | 模块 | {module name} |
-| 文件数 | {N} |
-| 代码行数 | {N} |
+| 文件数 | {approximate or sourced N} |
+| 代码行数 | {approximate or sourced N} |
 | 主要语言 | {language} |
 ```
 
-The metrics table is optional — include only when quantitative data is available from the input. Never fabricate metrics.
+The metrics table is optional — include only when quantitative data is available from the input. Never fabricate metrics. If the counting method is unclear, use `约 N` or omit the row.
 
 ### hero-illustration
 
@@ -155,6 +155,7 @@ Column names adapt to context:
 - Issues: 问题 | 严重程度 | 位置 | 建议
 - Suggestions: 建议 | 优先级 | 预期效果
 If there are fewer than 3 rows, use a list instead of a table.
+If a row contains an inferred claim, add `推断` in the relevant cell.
 
 ### metrics
 

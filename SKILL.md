@@ -110,8 +110,12 @@ tags: [{tag1}, {tag2}]
 
 ### Step 6 — Write Output
 
-- Report: `reports/{YYYY-MM-DD}_{spine_type}_{slug}/report.md`
-- Assets: `reports/{YYYY-MM-DD}_{spine_type}_{slug}/assets/`
+- Resolve the output root from the originating project root.
+- Resolution order: workspace root > git root > current working directory.
+- If the project root cannot be determined, fail instead of falling back.
+- Never write reports under the skill installation directory such as `~/.agents/skills/tech-report/`.
+- Report: `<project-root>/reports/{YYYY-MM-DD}_{spine_type}_{slug}/report.md`
+- Assets: `<project-root>/reports/{YYYY-MM-DD}_{spine_type}_{slug}/assets/`
 
 Extract slug from input content (filename, commit description, etc.) using lowercase kebab-case.
 
