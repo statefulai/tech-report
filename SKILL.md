@@ -23,7 +23,8 @@ After receiving `@report`, follow these steps in order:
 Run the plugin resolver to discover available capabilities:
 
 ```bash
-python3 scripts/resolve-plugins.py --plugins-file plugins.yaml
+python3 ~/.agents/skills/tech-report/scripts/resolve-plugins.py \
+  --plugins-file ~/.agents/skills/tech-report/plugins.yaml
 ```
 
 Output JSON:
@@ -125,7 +126,6 @@ python3 ~/.agents/skills/<plugin_name>/scripts/<script>.py <args>
 For instruction-only plugins (no scripts/), read the plugin's SKILL.md and follow its instructions.
 
 Rules:
-- Plugins are "suggested contributors", not co-decision-makers.
 - Plugin failure → degrade to text description, log a warning.
 - Plugins cannot alter report structure or section order.
 
