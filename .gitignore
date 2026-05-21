@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Environment variables
+.env
+
+# Generated reports (local only)
+reports/
+
+# Editor/project noise
+.idea/
+.vscode/
+
+# Sopify runtime state
+.sopify-skills/state/
+.sopify-skills/replay/
+.sopify-skills/plan/_registry.yaml
+
+# Temporary files
+tmp/
+.tmp/

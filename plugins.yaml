@@ -1,0 +1,16 @@
+# 在这里注册你本地已安装的 AI skill 作为插件。
+# tech-report 会读取每个 skill 的 SKILL.md，自动推断其能力类型。
+#
+# 能力类型：
+#   diagram      — 生成 SVG/PNG 技术图表（架构图、流程图、对比图）
+#   illustration — 生成配图（封面、概念图、手绘风格插画）
+#   data_source  — 读取外部数据（飞书文档、Notion 页面、API）
+#   browser      — 网页截图、DOM 提取
+#
+# 示例（取消注释即可启用）：
+# plugins:
+#   - fireworks-tech-graph    # → diagram
+#   - doc-to-sketch           # → illustration
+#   - feishu-docs             # → data_source
+
+plugins: []

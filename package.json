@@ -1,0 +1,37 @@
+{
+  "name": "@statefulai/tech-report",
+  "version": "0.1.0",
+  "description": "从代码、commit diff、文档链接、架构描述等技术输入，自动生成结构化中文技术报告的 AI Skill",
+  "main": "SKILL.md",
+  "keywords": [
+    "skill",
+    "report",
+    "technical-report",
+    "chinese",
+    "code-analysis",
+    "commit-analysis",
+    "markdown",
+    "claude-code",
+    "codex",
+    "copilot"
+  ],
+  "author": "statefulai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statefulai/tech-report.git"
+  },
+  "bugs": {
+    "url": "https://github.com/statefulai/tech-report/issues"
+  },
+  "homepage": "https://github.com/statefulai/tech-report#readme",
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "assets/",
+    "references/",
+    "scripts/",
+    "plugins.yaml"
+  ]
+}
