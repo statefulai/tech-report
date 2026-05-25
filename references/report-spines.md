@@ -15,6 +15,71 @@ The report engine resolves capabilities, not hard-coded skill names.
 - Never require a specific skill name such as `fireworks-tech-graph` or `doc-to-sketch`.
 - Every spine may use `hero-illustration` as an optional opener when illustration capability is available.
 
+### CapabilityRequest Construction Rules
+
+When encountering a `[diagram slot]` or `[hero-illustration]` in a spine, construct a CapabilityRequest with the following guidance:
+
+**slot_id**: Use a unique, stable identifier within the report (e.g., `"arch-overview"`, `"sec3-dataflow"`, `"hero-illustration"`). Do not use positional indices that shift when optional sections are skipped.
+
+**intent**: Describe what the diagram should convey in one sentence. Each spine's slot has a natural intent:
+
+| Spine | Slot Position | Suggested intent | Suggested type_hint |
+|-------|--------------|------------------|-------------------|
+| `tech_analysis` | 架构分析 | "展示系统的分层架构和组件关系" | architecture |
+| `tech_analysis` | 数据流 | "展示核心数据处理管线的流转路径" | data-flow |
+| `bug_fix` | 根因分析 | "对比修复前后的代码行为差异" | comparison |
+| `bug_fix` | 修复方案 | "展示修复方案的调用链路" | flowchart |
+| `architecture` | 架构总览 | "展示系统整体架构分层和模块关系" | architecture |
+| `architecture` | 数据流 | "展示关键数据在系统中的流转路径" | data-flow |
+
+**style_hint recommendations** (use semantic descriptions, not skill-specific style numbers):
+
+| Report Context | Suggested style_hint |
+|----------------|---------------------|
+| 正式技术报告 | `"warm, professional"` |
+| 开发博客 / README | `"dark, technical"` |
+| 产品演示 | `"glassmorphism, modern"` |
+| 简洁文档 | `"clean, minimal"` |
+
+These are advisory — Host may override based on its judgment.
+
+### Example CapabilityRequest
+
+A concrete example for a `tech_analysis` spine's architecture diagram slot:
+
+```yaml
+capability: diagram
+slot_id: "arch-overview"
+intent: "展示系统的三层架构：API 网关层、服务层、数据存储层"
+output_dir: "./reports/2026-01-15_tech_analysis_auth-module/assets"
+output_name: "architecture"
+contract_version: "1.0"
+content:
+  type_hint: "architecture"
+  style_hint: "warm, professional"
+  components:
+    - name: "API Gateway"
+      role: "entry"
+      group: "网关层"
+    - name: "Auth Service"
+      role: "processor"
+      group: "服务层"
+    - name: "PostgreSQL"
+      role: "storage"
+      group: "数据层"
+  relationships:
+    - from: "API Gateway"
+      to: "Auth Service"
+      label: "HTTP"
+      type: "flow"
+    - from: "Auth Service"
+      to: "PostgreSQL"
+      label: "SQL query"
+      type: "flow"
+```
+
+Note: `content.type_hint` and `content.style_hint` are nested under the `content` field. When referenced in tables above, the `content.` prefix is omitted for brevity.
+
 ## Spine Selection
 
 Match input to spine using the first rule that hits:

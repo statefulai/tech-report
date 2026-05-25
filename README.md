@@ -10,8 +10,9 @@
 
 - 📝 **报告排版 + 语言质量** — 不是通用 AI 编排框架，是专注写作质量的 skill
 - 🔌 **插件增强** — 你本地安装的 skill 可以注册为插件，按能力自动补图表、配图或数据
-- 📐 **三文件参考系统** — report-spines（骨架）+ section-archetypes（章节模板）+ writing-dna（风格锁定）
+- 📐 **三文件参考系统** — report-spines（骨架）+ section-archetypes（章节模板）+ writing-dna（风格锁定），保证报告结构可复现
 - 🎯 **`@report` 触发** — 统一的显式触发前缀
+- 🧩 **插件协议** — 已安装的 skill 自动变成报告增强能力，无需手动配置
 
 ## 安装
 
@@ -48,7 +49,18 @@ tech-report 根据输入内容自动选择报告骨架（spine），每种骨架
 
 ## 插件系统
 
-tech-report 本身只负责报告的结构和文字质量。图表、配图、外部数据等增强能力来自**你本地已安装的其他 AI skill**。
+tech-report 专注于报告的结构和文字质量。图表、配图、外部数据等增强能力来自**你本地已安装的其他 AI skill**。
+
+### 你的 skill 生态 = 报告增强管线
+
+装了什么 skill，报告就自动多什么能力：
+
+- 🔌 **装了图表 skill** → 报告自动生成架构图、流程图、对比图
+- 🎨 **装了配图 skill** → 报告自动加封面、概念图
+- 📊 **装了数据源 skill** → 报告自动拉取飞书/Notion 等外部数据
+- 📝 **什么都没装** → 输出高质量纯文字 Markdown 报告
+
+### 注册方式
 
 在 `plugins.yaml` 中注册你想用的 skill：
 
@@ -59,9 +71,22 @@ plugins:
   - your-data-source-skill   # 任何能读取外部数据（飞书、Notion 等）的 skill
 ```
 
-tech-report 会读取每个 skill 的 `SKILL.md`，自动推断其能力类型（`diagram` / `illustration` / `data_source` / `browser`），在报告生成时按需调用。
+无需配置能力映射，tech-report 会自动读取每个 skill 的 `SKILL.md`，推断其能力类型（`diagram` / `illustration` / `data_source` / `browser`）。
 
 **不注册任何插件也能用** — 输出纯文字 Markdown 报告，不包含图表。
+
+### 工作原理
+
+当报告需要架构图时：
+
+1. tech-report 构造请求："画一个三层架构，包含 API Gateway / Auth Service / PostgreSQL"
+2. Host（AI agent）选择你安装的图表 skill，适配参数格式
+3. 图表 skill 生成 SVG + PNG
+4. tech-report 嵌入报告
+
+如果 skill 生成失败，自动降级为文字描述——不会留下空白。
+
+用户无需理解协议细节——只要在 `plugins.yaml` 注册 skill 名即可。
 
 ## 支持的宿主
 

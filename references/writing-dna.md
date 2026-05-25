@@ -90,7 +90,7 @@ Format: `> {emoji} **{label}**：{content}`
 1. Symptom: what the user sees.
 2. File path + line range when available.
 3. Causal chain: why the code is wrong.
-4. Add `[diagram slot]` only if a diagram plugin is available.
+4. Add `[diagram slot]` only if diagram capability is available.
 5. End with a single 📌 callout that states the root cause.
 
 ### Architecture Analysis
