@@ -73,7 +73,7 @@ Architecture visualization with per-layer explanation.
 **{Layer N name}**：{2-3 lines.}
 ```
 
-When diagram capability is unavailable, replace `[diagram slot]` with a text description of the layers using indented bullet list.
+When diagram capability is unavailable or CapabilityResponse status is `failed`/`degraded` with no usable artifacts, use `fallback_text` from the response if provided; otherwise replace `[diagram slot]` with a text description of the layers using indented bullet list.
 
 ### code-walkthrough
 
@@ -134,7 +134,7 @@ Data flow or request chain description.
 {1 paragraph: key observations about this flow (bottleneck, coupling, etc.)}
 ```
 
-When diagram capability is unavailable, the numbered step list serves as the primary representation.
+When diagram capability is unavailable or CapabilityResponse status is `failed`/`skipped`, the numbered step list serves as the primary representation.
 
 ### checklist
 
@@ -219,7 +219,7 @@ Rules:
 ## Rules
 
 - One archetype per section. Never mix two archetypes in one section.
-- `[diagram slot]` is a placeholder, not literal text in the output. Replace with actual diagram or text fallback.
+- `[diagram slot]` is a placeholder, not literal text in the output. Replace with actual diagram (from CapabilityResponse `artifacts`) or text fallback (from `fallback_text` or manual text description).
 - `hero-illustration` is optional and should never be forced into a report.
 - All templates use `##` for section title. Never change heading level based on archetype.
 - Templates show structure, not exact wording. Adapt field names and content to context.

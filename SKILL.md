@@ -70,11 +70,15 @@ For each section in the sequence:
 2. Fill content following the template structure. Apply `references/writing-dna.md` rules throughout.
 3. When encountering `[diagram slot]`:
    - Check if `diagram` capability exists in the Step 1 available list.
-   - **Available**: Call the plugin's scripts to generate SVG + PNG. Insert into report.
-   - **Unavailable**: Replace with text description (indented list, numbered steps, or table). Never leave a blank slot.
+   - **Available**: Construct a CapabilityRequest with `capability: diagram`, a unique `slot_id`, the `intent` describing what the diagram should convey, `content` with components/relationships, `output_dir`/`output_name`, and `contract_version: "1.0"`. Host receives this request, selects a provider, translates to skill-native format, and returns a CapabilityResponse.
+     - `success`: Embed `artifacts` (first item = preferred format) into report.
+     - `degraded`: Embed available artifacts; if artifacts are insufficient for embedding, use `fallback_text` when provided, otherwise generate a text description manually. Never leave a blank slot.
+     - `failed`: Use `fallback_text` as text substitute. Never leave a blank slot.
+     - `skipped`: Host judged this slot unnecessary — skip silently, do not embed or generate fallback.
+   - **Unavailable** (no diagram capability registered): Replace with text description (indented list, numbered steps, or table). Never leave a blank slot.
 4. When encountering `[hero-illustration]`:
    - Check if `illustration` capability exists AND the report benefits from a visual opener.
-   - **Yes to both**: Call the plugin to generate the illustration.
+   - **Yes to both**: Construct a CapabilityRequest with `capability: illustration`. Host processes and returns CapabilityResponse. Embed on `success`/`degraded`, skip on `failed`/`skipped`.
    - **Otherwise**: Skip silently. Do not generate a placeholder.
 
 ### Step 5 — Assemble Report
