@@ -112,7 +112,19 @@ tags: [{tag1}, {tag2}]
 > - 生成时间: {timestamp}
 ```
 
-### Step 6 — Write Output
+### Step 6 — Verify (Consistency Gate)
+
+Before writing, run these checks against the assembled report. Mark failures as `[WARN]` in generation info and fix when possible.
+
+1. **Terminology consistency** — The same entity/service/component must use the same name throughout. Scan for variant spellings, abbreviations, and aliases of the same concept.
+2. **Severity-priority alignment** — If the report uses both severity and priority labels (e.g., P0/P1 + Critical/High), verify they don't contradict each other (P0 cannot pair with "Low" severity).
+3. **Diagram-text alignment** — Best-effort, based on CapabilityRequest metadata constructed during this session: every component in a diagram slot's `content.components` should appear (by name or role) in at least one prose section.
+4. **Data alignment** — Quantitative claims (file count, code line count, commit count, percentages) must match the values actually observed from the input. Re-verify any number cited in prose.
+5. **Reference integrity** — Locally resolvable file paths, function names, and class names cited in prose must exist in the project. External URLs and references should be explicitly marked as external.
+
+If any check fails and cannot be auto-fixed, keep the report as-is but append a warning line to the generation info block: `> - 一致性告警: {check name}: {brief description}`.
+
+### Step 7 — Write Output
 
 - Resolve the output root from the originating project root.
 - Resolution order: workspace root > git root > current working directory.
@@ -167,4 +179,4 @@ These rules from `references/writing-dna.md` apply to all sections at all times:
 |------|-------------|---------|
 | `references/report-spines.md` | Step 2-3 | Select spine, expand section sequence |
 | `references/section-archetypes.md` | Step 4 | Markdown template for each section |
-| `references/writing-dna.md` | Step 4-5 (throughout) | Writing style + report shell |
+| `references/writing-dna.md` | Step 4-6 (throughout) | Writing style + report shell |
