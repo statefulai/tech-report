@@ -1,10 +1,13 @@
 # tech-report
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@statefulai/tech-report)](https://www.npmjs.com/package/@statefulai/tech-report)
+
 <p align="center">
   <img src="./assets/cover.png" alt="tech-report cover" width="100%"/>
 </p>
 
-从代码、commit diff、文档链接、架构描述等技术输入，自动生成结构化中文技术报告的 AI Skill。
+可插件扩展的 AI Skill：从代码、commit diff、文档链接自动生成结构化中文技术报告，已安装的 skill 自动增强图表与配图。
 
 ## 特性
 
@@ -94,6 +97,7 @@ plugins:
 |------|---------|------|
 | Copilot CLI | `~/.agents/skills/` | `@report` |
 | Claude Code | `~/.claude/skills/` | `@report` |
+| Cursor | `~/.cursor/skills/` | `@report` |
 | Codex | `~/.codex/skills/` | `@report` |
 
 ## 项目结构
