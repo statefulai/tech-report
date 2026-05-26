@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580">
+<defs>
+  <clipPath id="main-clip"><rect width="900" height="580" rx="12"/></clipPath>
+</defs>
+<style>
+.scene1 { animation: sc1vis 30s linear infinite; }
+@keyframes sc1vis { 0% {opacity:1} 36% {opacity:1} 40% {opacity:0} 100% {opacity:0} }
+.scene2 { animation: sc2vis 30s linear infinite; opacity:0; }
+@keyframes sc2vis { 0% {opacity:0} 40% {opacity:0} 44% {opacity:1} 96% {opacity:1} 100% {opacity:0} }
+.tl0 { animation: tl0anim 30s linear infinite; opacity:0; }
+@keyframes tl0anim { 0%{opacity:0} 1.0%{opacity:0} 2.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl1 { animation: tl1anim 30s linear infinite; opacity:0; }
+@keyframes tl1anim { 0%{opacity:0} 5.0%{opacity:0} 6.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl2 { animation: tl2anim 30s linear infinite; opacity:0; }
+@keyframes tl2anim { 0%{opacity:0} 7.3%{opacity:0} 8.3%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl3 { animation: tl3anim 30s linear infinite; opacity:0; }
+@keyframes tl3anim { 0%{opacity:0} 10.0%{opacity:0} 11.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl4 { animation: tl4anim 30s linear infinite; opacity:0; }
+@keyframes tl4anim { 0%{opacity:0} 12.0%{opacity:0} 13.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl5 { animation: tl5anim 30s linear infinite; opacity:0; }
+@keyframes tl5anim { 0%{opacity:0} 14.0%{opacity:0} 15.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl6 { animation: tl6anim 30s linear infinite; opacity:0; }
+@keyframes tl6anim { 0%{opacity:0} 16.0%{opacity:0} 17.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl7 { animation: tl7anim 30s linear infinite; opacity:0; }
+@keyframes tl7anim { 0%{opacity:0} 18.3%{opacity:0} 19.3%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl8 { animation: tl8anim 30s linear infinite; opacity:0; }
+@keyframes tl8anim { 0%{opacity:0} 21.7%{opacity:0} 22.7%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.tl9 { animation: tl9anim 30s linear infinite; opacity:0; }
+@keyframes tl9anim { 0%{opacity:0} 24.0%{opacity:0} 25.0%{opacity:1} 38%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+.cl0 { animation: cl0anim 30s linear infinite; opacity:0; }
+@keyframes cl0anim { 0%{opacity:0} 40.0%{opacity:0} 40.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl1 { animation: cl1anim 30s linear infinite; opacity:0; }
+@keyframes cl1anim { 0%{opacity:0} 44.0%{opacity:0} 44.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl2 { animation: cl2anim 30s linear infinite; opacity:0; }
+@keyframes cl2anim { 0%{opacity:0} 46.7%{opacity:0} 47.2%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl3 { animation: cl3anim 30s linear infinite; opacity:0; }
+@keyframes cl3anim { 0%{opacity:0} 48.7%{opacity:0} 49.2%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl4 { animation: cl4anim 30s linear infinite; opacity:0; }
+@keyframes cl4anim { 0%{opacity:0} 49.7%{opacity:0} 50.2%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl5 { animation: cl5anim 30s linear infinite; opacity:0; }
+@keyframes cl5anim { 0%{opacity:0} 51.0%{opacity:0} 51.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl6 { animation: cl6anim 30s linear infinite; opacity:0; }
+@keyframes cl6anim { 0%{opacity:0} 53.0%{opacity:0} 53.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl7 { animation: cl7anim 30s linear infinite; opacity:0; }
+@keyframes cl7anim { 0%{opacity:0} 55.0%{opacity:0} 55.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl8 { animation: cl8anim 30s linear infinite; opacity:0; }
+@keyframes cl8anim { 0%{opacity:0} 56.7%{opacity:0} 57.2%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl9 { animation: cl9anim 30s linear infinite; opacity:0; }
+@keyframes cl9anim { 0%{opacity:0} 58.3%{opacity:0} 58.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl10 { animation: cl10anim 30s linear infinite; opacity:0; }
+@keyframes cl10anim { 0%{opacity:0} 59.3%{opacity:0} 59.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl11 { animation: cl11anim 30s linear infinite; opacity:0; }
+@keyframes cl11anim { 0%{opacity:0} 60.3%{opacity:0} 60.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl12 { animation: cl12anim 30s linear infinite; opacity:0; }
+@keyframes cl12anim { 0%{opacity:0} 61.3%{opacity:0} 61.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl13 { animation: cl13anim 30s linear infinite; opacity:0; }
+@keyframes cl13anim { 0%{opacity:0} 62.3%{opacity:0} 62.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl14 { animation: cl14anim 30s linear infinite; opacity:0; }
+@keyframes cl14anim { 0%{opacity:0} 65.0%{opacity:0} 65.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl15 { animation: cl15anim 30s linear infinite; opacity:0; }
+@keyframes cl15anim { 0%{opacity:0} 67.3%{opacity:0} 67.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl16 { animation: cl16anim 30s linear infinite; opacity:0; }
+@keyframes cl16anim { 0%{opacity:0} 70.0%{opacity:0} 70.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl17 { animation: cl17anim 30s linear infinite; opacity:0; }
+@keyframes cl17anim { 0%{opacity:0} 72.7%{opacity:0} 73.2%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl18 { animation: cl18anim 30s linear infinite; opacity:0; }
+@keyframes cl18anim { 0%{opacity:0} 75.0%{opacity:0} 75.5%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl19 { animation: cl19anim 30s linear infinite; opacity:0; }
+@keyframes cl19anim { 0%{opacity:0} 77.3%{opacity:0} 77.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cl20 { animation: cl20anim 30s linear infinite; opacity:0; }
+@keyframes cl20anim { 0%{opacity:0} 79.3%{opacity:0} 79.8%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+</style>
+
+<rect width="900" height="580" rx="12" fill="#0f0f0f" clip-path="url(#main-clip)"/>
+<rect width="900" height="38" fill="#0a0a0a"/>
+<rect x="0" y="38" width="900" height="1" fill="#2a2a2a"/>
+<circle cx="16" cy="19" r="5.5" fill="#ff5f57"/>
+<circle cx="32" cy="19" r="5.5" fill="#febc2e"/>
+<circle cx="48" cy="19" r="5.5" fill="#28c840"/>
+<g class="scene1">
+  <text x="450" y="23" text-anchor="middle" fill="#444444" font-size="12" font-family="-apple-system,monospace">bash — 120×30</text>
+  <rect x="0" y="39" width="900" height="541" fill="#161616"/>
+  <text x="24" y="74" font-size="13" font-family="Menlo,Monaco,monospace" class="tl0"><tspan fill="#22c55e" >❯ </tspan><tspan fill="#06b6d4" >npx</tspan><tspan fill="#e8e8e8" > skills add </tspan><tspan fill="#f59e0b" font-weight="600">statefulai/tech-report</tspan><tspan fill="#e8e8e8" > -g</tspan></text>
+  <text x="24" y="98" font-size="13" font-family="Menlo,Monaco,monospace" class="tl1"><tspan fill="#555555" >  Resolving </tspan><tspan fill="#888888" >statefulai/tech-report</tspan><tspan fill="#555555" > from GitHub...</tspan></text>
+  <text x="24" y="122" font-size="13" font-family="Menlo,Monaco,monospace" class="tl2"><tspan fill="#555555" >  Fetching latest release </tspan><tspan fill="#22c55e" >v1.3.0</tspan><tspan fill="#555555" >...</tspan></text>
+  <text x="24" y="146" font-size="13" font-family="Menlo,Monaco,monospace" class="tl3"><tspan fill="#22c55e" >  ✓ Installed to </tspan><tspan fill="#888888" >~/.agents/skills/</tspan><tspan fill="#f59e0b" >tech-report</tspan></text>
+  <text x="24" y="170" font-size="13" font-family="Menlo,Monaco,monospace" class="tl4"><tspan fill="#22c55e" >  ✓ Installed to </tspan><tspan fill="#888888" >~/.claude/skills/</tspan><tspan fill="#f59e0b" >tech-report</tspan></text>
+  <text x="24" y="194" font-size="13" font-family="Menlo,Monaco,monospace" class="tl5"><tspan fill="#22c55e" >  ✓ Installed to </tspan><tspan fill="#888888" >~/.codex/skills/</tspan><tspan fill="#f59e0b" >tech-report</tspan></text>
+  <text x="24" y="218" font-size="13" font-family="Menlo,Monaco,monospace" class="tl6"><tspan fill="#22c55e" >  ✓ Installed to </tspan><tspan fill="#888888" >~/.cursor/skills/</tspan><tspan fill="#f59e0b" >tech-report</tspan></text>
+  <text x="24" y="248" font-size="13" font-family="Menlo,Monaco,monospace" class="tl7"><tspan fill="#22c55e" >  ✅ </tspan><tspan fill="#f59e0b" font-weight="600">tech-report</tspan><tspan fill="#e8e8e8" > installed to </tspan><tspan fill="#22c55e" font-weight="600">4 hosts</tspan></text>
+  <text x="24" y="272" font-size="13" font-family="Menlo,Monaco,monospace" class="tl8"><tspan fill="#555555" >  Skills active: </tspan><tspan fill="#06b6d4" >fireworks-tech-graph</tspan><tspan fill="#06b6d4" >  doc-to-sketch</tspan><tspan fill="#06b6d4" >  feishu-docs</tspan></text>
+  <text x="24" y="308" font-size="13" font-family="Menlo,Monaco,monospace" class="tl9"><tspan fill="#555555" >  💡 Now use </tspan><tspan fill="#f59e0b" font-weight="600">@report</tspan><tspan fill="#555555" > in Claude, Cursor, or Codex to generate reports.</tspan></text>
+</g>
+<g class="scene2">
+  <text x="450" y="23" text-anchor="middle" fill="#444444" font-size="12" font-family="-apple-system,sans-serif">claude.ai</text>
+  <rect x="0" y="39" width="190" height="541" fill="#111111"/>
+  <rect x="190" y="39" width="1" height="541" fill="#2a2a2a"/>
+  <text x="12" y="62" fill="#444444" font-size="10" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="0.5">PROJECTS</text>
+  <rect x="5" y="68" width="180" height="32" rx="5" fill="#1f1a10"/>
+  <rect x="5" y="68" width="3" height="32" rx="1.5" fill="#f59e0b"/>
+  <text x="14" y="84" fill="#e8e8e8" font-size="12" font-family="-apple-system,sans-serif" font-weight="500">tech-report</text>
+  <text x="14" y="96" fill="#888888" font-size="10" font-family="-apple-system,sans-serif">arch analysis</text>
+  <text x="12" y="126" fill="#444444" font-size="11" font-family="-apple-system,sans-serif">data-sprite-portal</text>
+  <text x="12" y="156" fill="#444444" font-size="11" font-family="-apple-system,sans-serif">api-design</text>
+  <circle cx="18" cy="562" r="11" fill="#1f1a10"/>
+  <text x="18" y="567" text-anchor="middle" fill="#f59e0b" font-size="10" font-family="-apple-system,sans-serif" font-weight="700">W</text>
+  <text x="34" y="558" fill="#e8e8e8" font-size="11" font-family="-apple-system,sans-serif">weixin.li</text>
+  <text x="34" y="570" fill="#555555" font-size="10" font-family="-apple-system,sans-serif">Pro</text>
+  <rect x="191" y="39" width="709" height="541" fill="#1e1e1e"/>
+  <rect x="191" y="39" width="709" height="44" fill="#1e1e1e"/>
+  <rect x="191" y="83" width="709" height="1" fill="#2a2a2a"/>
+  <text x="203" y="60" fill="#e8e8e8" font-size="13" font-family="-apple-system,sans-serif" font-weight="600">tech-report 架构分析</text>
+  <text x="203" y="75" fill="#888888" font-size="10" font-family="-apple-system,sans-serif">Claude Sonnet 4.5</text>
+  <rect x="754" y="51" width="106" height="17" rx="8.5" fill="#0d1f0d"/>
+  <circle cx="764" cy="59.5" r="3.5" fill="#22c55e"/>
+  <text x="771" y="63" fill="#22c55e" font-size="10" font-family="-apple-system,sans-serif">3 skills active</text>
+  <g class="cl0">
+    <rect x="201" y="92" width="689" height="48" rx="7" fill="#2d2d2d"/>
+    <circle cx="213" cy="106" r="8" fill="#1f1a10"/>
+    <text x="213" y="110" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="-apple-system,sans-serif" font-weight="700">W</text>
+    <text x="227" y="105" fill="#888888" font-size="10" font-family="-apple-system,sans-serif">weixin.li</text>
+    <text x="227" y="122" font-size="12" font-family="-apple-system,monospace"><tspan fill="#f59e0b" font-weight="600">@report</tspan><tspan fill="#e8e8e8"> 分析 tech-report 项目架构，生成图表</tspan></text>
+    <text x="227" y="136" fill="#444444" font-size="10" font-family="-apple-system,sans-serif">今天 16:20</text>
+  </g>
+  <g class="cl1">
+    <rect x="201" y="150" width="689" height="372" rx="7" fill="#252525"/>
+    <circle cx="213" cy="164" r="8" fill="#1f1a10"/>
+    <text x="213" y="168" text-anchor="middle" fill="#f59e0b" font-size="10" font-family="-apple-system,sans-serif" font-weight="700">C</text>
+    <text x="227" y="162" fill="#e8e8e8" font-size="11" font-family="-apple-system,sans-serif" font-weight="500">Claude</text>
+    <text x="227" y="174" fill="#444444" font-size="9" font-family="-apple-system,sans-serif">tech-report skill</text>
+  </g>
+  <text x="213" y="190" font-size="12" font-family="-apple-system,monospace" class="cl2"><tspan fill="#06b6d4" font-weight="600">Step 1</tspan><tspan fill="#888888" > — Resolve Plugins</tspan></text>
+  <text x="221" y="210" font-size="10" font-family="-apple-system,monospace" class="cl3"><tspan fill="#e8e8e8" >  fireworks-tech-graph</tspan><tspan fill="#22c55e" >  →  diagram</tspan></text>
+  <text x="221" y="230" font-size="10" font-family="-apple-system,monospace" class="cl4"><tspan fill="#e8e8e8" >  doc-to-sketch</tspan><tspan fill="#22c55e" >         →  illustration</tspan></text>
+  <text x="221" y="250" font-size="10" font-family="-apple-system,monospace" class="cl5"><tspan fill="#22c55e" font-weight="600">  3 plugins ready ✓</tspan></text>
+  <text x="213" y="274" font-size="12" font-family="-apple-system,monospace" class="cl6"><tspan fill="#06b6d4" font-weight="600">Step 2</tspan><tspan fill="#888888" > — Spine: </tspan><tspan fill="#f59e0b" font-weight="600">architecture</tspan></text>
+  <text x="213" y="298" font-size="12" font-family="-apple-system,monospace" class="cl7"><tspan fill="#06b6d4" font-weight="600">Step 3</tspan><tspan fill="#888888" > — Sections</tspan></text>
+  <text x="223" y="318" font-size="10" font-family="-apple-system,monospace" class="cl8"><tspan fill="#888888" >• 系统定位</tspan></text>
+  <text x="223" y="338" font-size="10" font-family="-apple-system,monospace" class="cl9"><tspan fill="#888888" >• 架构总览</tspan></text>
+  <text x="223" y="358" font-size="10" font-family="-apple-system,monospace" class="cl10"><tspan fill="#888888" >• 核心组件</tspan></text>
+  <text x="223" y="378" font-size="10" font-family="-apple-system,monospace" class="cl11"><tspan fill="#888888" >• 数据流</tspan></text>
+  <text x="223" y="398" font-size="10" font-family="-apple-system,monospace" class="cl12"><tspan fill="#888888" >• 设计决策</tspan></text>
+  <text x="223" y="418" font-size="10" font-family="-apple-system,monospace" class="cl13"><tspan fill="#888888" >• 总结</tspan></text>
+  <text x="213" y="442" font-size="12" font-family="-apple-system,monospace" class="cl14"><tspan fill="#06b6d4" font-weight="600">Step 4</tspan><tspan fill="#888888" > — fireworks-tech-graph 生成图表</tspan></text>
+  <text x="221" y="462" font-size="10" font-family="-apple-system,monospace" class="cl15"><tspan fill="#22c55e" >  ✓ arch-overview.svg</tspan><tspan fill="#444444" >  (960×600, Style 2 Dark)</tspan></text>
+  <text x="221" y="482" font-size="10" font-family="-apple-system,monospace" class="cl16"><tspan fill="#22c55e" >  ✓ execution-flow.svg</tspan><tspan fill="#444444" >  (960×600, Style 2 Dark)</tspan></text>
+  <text x="213" y="506" font-size="12" font-family="-apple-system,monospace" class="cl17"><tspan fill="#06b6d4" font-weight="600">Step 6</tspan><tspan fill="#888888" > — Consistency Gate  </tspan><tspan fill="#22c55e" font-weight="600">5/5 passed ✓</tspan></text>
+  <text x="213" y="530" font-size="12" font-family="-apple-system,monospace" class="cl18"><tspan fill="#06b6d4" font-weight="600">Step 7</tspan><tspan fill="#888888" > — Output</tspan></text>
+  <text x="221" y="550" font-size="10" font-family="-apple-system,monospace" class="cl19"><tspan fill="#e8e8e8" font-weight="600">reports/2026-05-25_architecture_self-analysis/report.md</tspan></text>
+  <rect x="211" y="563" width="669" height="20" rx="3" fill="#052e16" class="cl20"/>
+  <text x="213" y="576" font-size="11" font-family="-apple-system,monospace" class="cl20"><tspan fill="#22c55e" font-weight="600">✅ 报告生成完成  </tspan><tspan fill="#888888" >查看 reports/ 目录 →</tspan></text>
+  <rect x="201" y="534" width="689" height="32" rx="16" fill="#2d2d2d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="215" y="555" fill="#444444" font-size="11" font-family="-apple-system,sans-serif">@report 继续分析...</text>
+  <rect x="215" y="543" width="1" height="14" fill="#f59e0b" class="cursor"/>
+  <circle cx="880" cy="550" r="12" fill="#d97706"/>
+  <text x="880" y="555" text-anchor="middle" fill="white" font-size="13" font-family="-apple-system,sans-serif">↑</text>
+</g>
+</svg>

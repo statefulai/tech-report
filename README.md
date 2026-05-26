@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/@statefulai/tech-report)](https://www.npmjs.com/package/@statefulai/tech-report)
 
 <p align="center">
-  <img src="./assets/cover.png" alt="tech-report cover" width="100%"/>
+  <img src="./assets/demo-claude.svg" alt="tech-report 在 Claude 中的使用效果" width="100%"/>
 </p>
 
 可插件扩展的 AI Skill：从代码、commit diff、文档链接自动生成结构化中文技术报告，已安装的 skill 自动增强图表与配图。

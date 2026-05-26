@@ -1,7 +1,7 @@
 {
   "name": "@statefulai/tech-report",
   "version": "0.1.0",
-  "description": "从代码、commit diff、文档链接、架构描述等技术输入，自动生成结构化中文技术报告的 AI Skill",
+  "description": "可插件扩展的 AI Skill：从代码、commit diff、文档链接自动生成结构化中文技术报告，已安装的 skill 自动增强图表与配图",
   "main": "SKILL.md",
   "keywords": [
     "skill",
