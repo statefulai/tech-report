@@ -11,9 +11,10 @@
 
 ## 特性
 
-- 📝 **报告排版 + 语言质量** — 不是通用 AI 编排框架，是专注写作质量的 skill
+- 📝 **报告排版 + 语言质量** — 不是通用 AI 编排框架，是专注写作质量的 skill（每段首句给结论、代码块精简不堆砌）
+- 📚 **多文档架构分析** — 全项目级别分析时自动按功能区拆分为 2-4 篇子文档 + 索引主篇
 - 🔌 **插件增强** — 你本地安装的 skill 可以注册为插件，按能力自动补图表、配图或数据
-- 📐 **三文件参考系统** — report-spines（骨架）+ section-archetypes（章节模板）+ writing-dna（风格锁定），保证报告结构可复现
+- 📐 **三文件参考系统** — report-spines（骨架 + 长度预算）+ section-archetypes（11 种章节模板）+ writing-dna（风格 + 认知纪律）
 - 🎯 **`@report` 触发** — 统一的显式触发前缀
 - 🧩 **插件协议** — 已安装的 skill 自动变成报告增强能力，无需手动配置
 
@@ -30,6 +31,7 @@ npx skills add statefulai/tech-report -g
 @report 分析 commit fc2d575
 @report https://xxx.feishu.cn/docx/xxx
 @report 分析 src/auth/ 的架构
+@report 分篇分析整个项目的架构
 ```
 
 ## 工作流程
@@ -114,9 +116,9 @@ tech-report/
 ├── SKILL.md                    # 核心 skill 指令
 ├── plugins.yaml                # 插件注册表（用户配置）
 ├── references/
-│   ├── report-spines.md        # 报告骨架定义（5 种）
-│   ├── section-archetypes.md   # 章节 Markdown 模板（10 种）
-│   └── writing-dna.md          # 写作风格锁定
+│   ├── report-spines.md        # 报告骨架定义（5 种）+ 长度预算
+│   ├── section-archetypes.md   # 章节 Markdown 模板（11 种，含 doc-index）
+│   └── writing-dna.md          # 写作风格 + 认知纪律
 ├── scripts/
 │   └── resolve-plugins.py      # 插件能力解析
 ├── assets/                     # 封面与示意图

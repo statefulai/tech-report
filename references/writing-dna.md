@@ -30,6 +30,24 @@ Precise, readable Chinese technical reports for engineers. Not blog posts, acade
 - Prefer sentences under 40 Chinese characters; let technical sentences stay longer when splitting would harm meaning.
 - Use active voice. Avoid double negatives and rhetorical questions.
 
+## Cognitive Discipline
+
+### Conclusion-First
+
+Every section and sub-section opens with its core conclusion or judgment. Evidence (code, data, citations) follows the conclusion.
+
+- Section opening sentence = that section's takeaway (reader knows the point after line 1).
+- A conclusion statement must precede every code block (stating what the code proves or demonstrates).
+- After a code block, do not restate what the code already shows; only add design intent or context invisible in the code itself.
+- Exception: pure data display sections (`metrics` archetype) may lead with the data table.
+
+### Evidence Density
+
+- Max 2 code blocks per section. If more are needed, split into sub-sections.
+- Each code block ≤ 15 lines. Truncate with `// ...` and keep only the key fragment.
+- At least 1 paragraph of explanatory text between adjacent code blocks (no back-to-back code).
+- Prefer tables over prose for comparisons; do not restate tabular information in surrounding text.
+
 ## Report Shell
 
 Every report uses this fixed shell:
@@ -136,10 +154,13 @@ Apply only when the report type matches.
 ## Format Constraints
 
 **Code blocks**:
-- Always use a language tag.
+- Always use a language tag; use `text` for invented pseudo-code or conceptual flows, real language tags only for excerpts based on actual source.
 - Keep blocks under 20 lines when possible; split long excerpts.
 - Mark key lines with `// ←`.
 - Add one sentence before and after each block.
+
+**References**:
+- When referencing project files in prose, use relative Markdown links (`[filename](path)`) rather than bare filenames — enables one-click navigation in GitHub / VS Code renders.
 
 **Images**:
 - Always use alt text.
@@ -168,3 +189,4 @@ Never generate:
 - Code blocks without language tags.
 - Images without alt text.
 - Manual section numbering.
+- Prose that restates what a table or diagram already shows — provide only interpretation and design intent not visible in the visual itself.
