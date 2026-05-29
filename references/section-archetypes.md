@@ -224,3 +224,43 @@ Rules:
 - All templates use `##` for section title. Never change heading level based on archetype.
 - Templates show structure, not exact wording. Adapt field names and content to context.
 - When input data is insufficient for an archetype's optional elements (metrics table, diagram), omit them cleanly rather than fabricating content.
+
+## Multi-Document Archetype
+
+### doc-index
+
+Entry point for multi-document mode. Provides architectural overview and navigation to sub-documents. Only used as `index.md` in multi-document output.
+
+```markdown
+## {project/system name}
+
+> **摘要**：{one-paragraph summary of the entire system analysis}
+
+## 架构总览
+
+{[diagram slot] — high-level architecture of the full system}
+
+{2-3 paragraphs: system positioning, design philosophy, key constraints}
+
+## 功能区索引
+
+| 功能区 | 覆盖模块 | 核心职责 | 关键发现 |
+|--------|---------|---------|---------|
+| [{area-1}](./modules/{area-1}.md) | {module list} | {one-line responsibility} | {one-line finding} |
+| [{area-2}](./modules/{area-2}.md) | {module list} | {one-line responsibility} | {one-line finding} |
+
+## 关键交互
+
+{Cross-area interactions and dependencies not covered in individual sub-documents.}
+
+## 总结
+
+{Overall system assessment + recommended reading order for sub-documents.}
+```
+
+Rules:
+- Only used in multi-document mode as the `index.md` structure.
+- Target 2–4 rows in the index table. Group small/related modules into functional areas.
+- "关键交互" describes inter-area dependencies; detail belongs in sub-docs.
+- Diagram slot shows the high-level architecture; detail diagrams go in sub-documents.
+- Keep `index.md` under 100 lines — it is a navigation hub, not a full report.

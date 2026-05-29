@@ -120,7 +120,7 @@ Before writing, run these checks against the assembled report. Mark failures as 
 2. **Severity-priority alignment** — If the report uses both severity and priority labels (e.g., P0/P1 + Critical/High), verify they don't contradict each other (P0 cannot pair with "Low" severity).
 3. **Diagram-text alignment** — Best-effort, based on CapabilityRequest metadata constructed during this session: every component in a diagram slot's `content.components` should appear (by name or role) in at least one prose section.
 4. **Data alignment** — Quantitative claims (file count, code line count, commit count, percentages) must match the values actually observed from the input. Re-verify any number cited in prose.
-5. **Reference integrity** — Locally resolvable file paths, function names, and class names cited in prose must exist in the project. External URLs and references should be explicitly marked as external.
+5. **Reference integrity** — Locally resolvable file paths, function names, and class names cited in prose must exist in the project. External URLs and references should be explicitly marked as external. Items listed in "问题与建议" must reflect the current code state — re-read target files before claiming an issue is open.
 
 If any check fails and cannot be auto-fixed, keep the report as-is but append a warning line to the generation info block: `> - 一致性告警: {check name}: {brief description}`.
 
@@ -134,6 +134,39 @@ If any check fails and cannot be auto-fixed, keep the report as-is but append a 
 - Assets: `<project-root>/reports/{YYYY-MM-DD}_{spine_type}_{slug}/assets/`
 
 Extract slug from input content (filename, commit description, etc.) using lowercase kebab-case.
+
+#### Multi-Document Mode
+
+When **both** conditions are met, use multi-document output instead of a single report.md:
+
+1. User explicitly requests splitting ("按模块" / "分拆" / "multi-doc" / "分篇输出")  
+   OR input is whole-system analysis (targets the entire project/repo, not a specific service or module)
+2. AND spine = `architecture`
+
+All other scenarios (single file analysis, commit diff, document review, focused subsystem) → always single file, do not prompt or split.
+
+**Output structure:**
+
+```
+reports/{date}_{type}_{slug}/
+├── index.md              ← Main document (architecture overview + area index)
+├── modules/
+│   ├── {area-1}.md       ← Sub-document per functional area (NOT per file/directory)
+│   ├── {area-2}.md
+│   └── ...
+└── assets/               ← Shared asset directory
+```
+
+**Rules:**
+- `index.md` uses the `doc-index` archetype (see `section-archetypes.md`).
+- Group related modules into functional areas. Target **2–4 sub-documents**, not one per directory. A project with 10 modules should produce 3–4 sub-docs, not 10.
+- Each sub-document is an independent report using `tech_analysis` spine sections 3–6 (架构分析, 核心逻辑, 数据流, 问题与建议).
+- Sub-documents reference shared assets with relative paths: `../assets/xxx.svg`
+- `index.md` links to sub-documents: `[功能区](./modules/xxx.md)`
+- Cross-references between sub-documents: `参见 [功能区](./xxx.md#section-anchor)`
+- Front matter includes `parent: index.md` (in sub-docs) or `children: [modules/...]` (in index.md).
+- Each sub-document gets its own `## 总结` (takeaway) section.
+- The `index.md` summary covers the system as a whole, not individual modules.
 
 ## Calling Plugins
 

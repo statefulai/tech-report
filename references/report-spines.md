@@ -176,6 +176,20 @@ No diagram slots by default — document reviews rarely need generated diagrams.
 
 Illustration slots are also optional here and should only be used when the source document is visually oriented or the user explicitly wants a visual recap.
 
+## Length Budget
+
+Reference values calibrated against existing reports. Not hard limits — when exceeding budget, prefer splitting sections or triggering multi-document mode over truncating valuable content.
+
+| Spine | Target (Chinese chars) | Target (lines) | Overflow strategy |
+|-------|----------------------|----------------|-------------------|
+| `tech_analysis` | 1500–3000 | 80–150 | Split 数据流 into sub-section; reduce code blocks |
+| `bug_fix` | 800–1500 | 50–90 | Omit repetitive fix steps |
+| `changelog` | 600–1200 | 40–70 | Expand only top 3 changes |
+| `architecture` | 2000–4000 | 100–200 | Trigger multi-document mode (see SKILL.md Step 7) |
+| `document_review` | 1000–2000 | 60–120 | Merge similar suggestions |
+
+When `architecture` spine output approaches 4000 chars and the user has indicated project-level analysis, suggest multi-document mode. For `architecture` spine, lines is the primary metric (Chinese char count is naturally low due to English identifiers, paths, and code blocks).
+
 ## Rules
 
 - Every spine starts with a summary-type section and ends with `[takeaway]`.
